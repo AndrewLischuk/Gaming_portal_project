@@ -1,0 +1,63 @@
+.footer {   
+    @include bg-color-b;   
+    div.header-title {
+        margin: 0;
+        padding-top: 100px;
+    }
+    & > div .links {
+        padding-top: 10px;
+        padding-left: 0;       
+        a {
+            padding-right: 5px;
+            padding-bottom: 45px;
+        }
+    }      
+}
+.footer-menu {    
+    align-self: flex-end;
+    div {
+        padding-bottom: 20px;
+    }
+    div:first-child {
+        padding-top: 55px;
+    }
+    div:last-child {
+        padding-bottom: 50px;
+        border-bottom: 2px solid $color-yellow;
+    }
+    a {
+        text-decoration: none;
+        @include text-title-bold-30;
+        font-size: 16px;
+        color: $color-white;
+    }
+}
+.footer-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  
+    position: relative;  
+    img {
+        
+        opacity: 25%;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+    }
+}
+.footer-descr {
+    @include fontSublimeTitle;
+    position: absolute;
+    top: 55%;
+    left: 40px;
+    font-size: 80px;
+}
+.footer-last {    
+    @include bg-color-w;
+    height: 65px;
+}
+.footer-bottom {
+    @include bg-color-w;
+    height: 65px;
+    width: 100%;
+}

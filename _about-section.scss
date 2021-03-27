@@ -1,0 +1,59 @@
+
+.about {
+    @include bg-color-w;
+    padding-bottom: 60px;
+    
+}
+div .section-title {
+    padding-left: 50px;
+}
+
+.section-title div:first-child {
+    color: #717171;
+    font-size: 30px;    
+}
+.section-title div:first-child span {
+    font-size: 45px;
+    color: #717171
+}
+.span-underline {
+    @include spanUnder;
+}
+.about h1 {
+    @include text-description-regular-18;
+    color: $color-black;
+    margin-bottom: 20px;
+}
+.round-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 25px;
+    background-color: $color-light-gray;
+    border: 2px solid $color-orange;
+    border-radius: 30px;
+    @include flexRowCenter;
+}
+.thesis-text {
+    @include text-description-italic-16;
+    font-size: 10px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+}
+
+.article {
+    @include text-description-regular-18;
+    color: $color-gray-font;
+    margin-top: 35px;
+    margin-bottom: 70px;
+    font-size: 14px;
+    border-left: 2px solid #717171;
+    
+}
+.article p:first-child {
+    margin-bottom: 20px;
+    color: $color-black;
+    font-style: italic;
+    font-size: 16px
+}

@@ -1,0 +1,114 @@
+
+//==================================FONTS==================================
+
+@mixin fontSublimeTitle {
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: $color-white;
+}
+
+@mixin text-title-bold-30 {
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: $color-black;
+}
+@mixin text-description-regular-18 {
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-white;
+}
+@mixin text-description-italic-16 {
+    font-family: 'Myriad Pro', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: $color-black;
+}
+@mixin sectionTitle {
+    padding-top: 35px;
+    @include text-title-bold-30;
+    font-size: 60px; 
+    line-height: 0.75;
+}
+@mixin sectionTitleDev {
+    @include sectionTitle;
+    font-size: 30px;
+        span:nth-child(1) {
+            font-size: 45px;
+        }
+        span span {
+            font-size: 45px;
+            color: $color-black;
+        }
+    }
+
+//==================================COMMON==================================
+
+@mixin spanEl {
+    color: $color-yellow;
+}
+@mixin spanUnder {
+    margin-top: 5px;
+    border-bottom: 2px solid #717171;
+    color: $color-black;
+}
+@mixin bg-color-b {
+    background-color: $color-black;
+}
+@mixin bg-color-w {
+    background-color: $color-white;
+}
+
+//==================================FLEX==================================
+
+@mixin flexColumnLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+@mixin flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexRowCenter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexRowTopCenter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+@mixin flexRowBottomCenter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+@mixin flexRowLeft {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+@mixin flexRowSpace {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    order: 2;
+}

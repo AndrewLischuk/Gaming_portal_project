@@ -1,0 +1,94 @@
+.contacts {
+    @include bg-color-w;
+    padding-bottom: 65px;
+    div.section-title {
+        color: $color-white;
+        span span, span+span {
+            color: $color-white;
+        }
+    }
+    .contact-us {
+        background-color: $color-blue;   
+    } 
+}
+.map {    
+    overflow: hidden;
+    padding-left: 35px;
+    iframe {
+        margin-left: -15px;
+    }
+}
+div .map {    
+    height: 100%;
+}
+form {    
+    padding-left: 35px;
+    div {
+        padding-top: 15px;
+
+        input {            
+            height: 30px;
+            padding-left: 15px;            
+        }
+        textarea {
+            height: 75px;
+            resize: none;
+        }
+        input, textarea {
+            width: 100%;
+            border: 2px solid $color-white;
+            background-color: transparent;
+            @include text-title-bold-30;
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-white;
+            &::-webkit-input-placeholder {
+                @include text-title-bold-30;
+                font-size: 16px;
+                font-weight: 600;
+                color: $color-white;
+            }
+        }
+        &:first-child {
+            padding-top: 30px;
+        }
+        &:last-child {
+            padding-bottom: 60px;
+            border-bottom: 2px solid $color-white;
+        }
+        button {
+            width: 100px;
+            height: 30px;
+            background-color: $color-yellow;
+            @include text-title-bold-30;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid transparent;
+        }        
+    }
+}
+form div input:focus, form div textarea:focus {
+    outline: none;
+    outline-offset: 0;
+}
+.location {
+    div {
+        @include text-title-bold-30;
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-white;
+        align-items: flex-end;
+    }
+    p {
+        @include text-description-regular-18;
+        font-size: 12px;
+    }    
+}
+.links {
+    padding-top: 10px;
+    padding-left: 60px;
+    padding-bottom: 45px;
+    a {
+        padding-right: 5px;
+    }
+}

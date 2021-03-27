@@ -1,0 +1,49 @@
+@import "./grids";
+@import "./veriables";
+@import "./mixins";
+@import "./fonts";
+@import "./header-section";
+@import "./about-section";
+@import "./features-section";
+@import "./strategy-section";
+@import "./services-section";
+@import "./team-section";
+@import "./testimonials-section";
+@import "./blogs-section";
+@import "./contacts-section";
+@import "./footer-section";
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: $color-black;    
+}
+.flex-column-left {
+    @include flexColumnLeft;
+}
+.flex-column-center {
+    @include flexColumnCenter;
+}
+.flex-row-center {
+    @include flexRowCenter;
+}
+.flex-row-left {
+    @include flexRowLeft;
+}
+.flex-row-top-center {
+    @include flexRowTopCenter;
+}
+.flex-row-bottom-center {
+    @include flexRowBottomCenter;
+}
+.flex-row-space {
+    @include flexRowSpace;
+}
+.main {
+    @include bg-color-b;
+}
+.section-title {
+    @include sectionTitleDev;  
+}
