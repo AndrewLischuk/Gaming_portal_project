@@ -16,17 +16,12 @@
     color: $color-black-9;
     transition: margin .5s;
 }
-.feat-menu-hov {
-    width: 20%;
-    border-top: 3px solid transparent;
-    transition: all .5s;
-}
+
 .feat-menu a:hover {
     margin: 0 20px;    
 }
-.feat-menu a:hover+div.feat-menu-hov {
-    width: 40%;
-    border-top: 3px solid $color-yellow;    
+.feat-menu a:hover+div.border-hover {
+    @include borderHoverEffect;    
 }
 .box-feat {
     overflow: hidden;

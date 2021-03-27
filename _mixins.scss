@@ -4,7 +4,7 @@
 @mixin fontSublimeTitle {
     font-family: 'Myriad Pro', sans-serif;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 80px;
     color: $color-white;
 }
 
@@ -60,6 +60,16 @@
 }
 @mixin bg-color-w {
     background-color: $color-white;
+}
+@mixin borderHover {
+    margin-top: 3px;
+    width: 20%;
+    border-top: 3px solid transparent;
+    transition: all .5s;
+}
+@mixin borderHoverEffect {
+    width: 50%;
+    border-top: 3px solid $color-yellow;
 }
 
 //==================================FLEX==================================
