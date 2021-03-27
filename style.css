@@ -1240,18 +1240,26 @@ form div input:focus, form div textarea:focus {
   position: absolute;
   top: 55%;
   left: 40px;
+  padding-bottom: 30px;
   font-size: 80px;
-}
-
-.footer-last {
-  background-color: #fff;
-  height: 65px;
 }
 
 .footer-bottom {
   background-color: #fff;
   height: 65px;
   width: 100%;
+}
+
+@media (max-width: 375px) {
+  .footer-box {
+    display: none;
+  }
+}
+
+@media (max-width: 765px) {
+  .footer-box {
+    display: none;
+  }
 }
 
 * {
