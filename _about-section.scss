@@ -2,19 +2,34 @@
 .about {
     @include bg-color-w;
     padding-bottom: 60px;
-    
+    .section-title {
+        padding-left: 50px;
+        &>div:nth-child(1) {
+            color: #717171;
+            font-size: 30px;
+            span {
+                font-size: 45px;
+                color: #717171
+            }
+        }
+        &>div:nth-child(2) {
+            font-size: 80px;
+            span {
+                font-size: 80px;
+            }
+        }
+    }    
+}
+@media (max-width: 375px) {
+    .section-title>div:nth-child(2) {
+        font-size: 60px !important;
+        span {
+            font-size: 60px !important;
+        }
+    }
 }
 div .section-title {
     padding-left: 50px;
-}
-
-.section-title div:first-child {
-    color: #717171;
-    font-size: 30px;    
-}
-.section-title div:first-child span {
-    font-size: 45px;
-    color: #717171
 }
 .span-underline {
     @include spanUnder;

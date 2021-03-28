@@ -1,17 +1,27 @@
 .footer {   
     @include bg-color-b;   
-    div.header-title {
+    div.footer-title {
         margin: 0;
         padding-top: 100px;
-    }
-    & > div .links {
-        padding-top: 10px;
-        padding-left: 0;       
-        a {
-            padding-right: 5px;
-            padding-bottom: 45px;
+        @include fontSublimeTitle;
+    }          
+}
+.footer-links {
+    padding-top: 10px;
+    padding-left: 0;
+    div {
+        margin-right: 5px;
+    }       
+    a {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        &:hover {
+            border: 2px solid $color-yellow;
         }
-    }      
+    }
 }
 .footer-menu {    
     align-self: flex-end;
@@ -26,10 +36,16 @@
         border-bottom: 2px solid $color-yellow;
     }
     a {
+        margin: 0;
         text-decoration: none;
         @include text-title-bold-30;
         font-size: 16px;
         color: $color-white;
+        transition: margin .5s, color .5s;
+        &:hover {
+            color: $color-yellow;
+            margin: 0 15px;
+        }
     }
 }
 .footer-box {

@@ -1,6 +1,9 @@
 .contacts {
     @include bg-color-w;
     padding-bottom: 65px;
+    height: 670px;
+    position: relative;
+    overflow: hidden;
     div.section-title {
         color: $color-white;
         span span, span+span {
@@ -8,14 +11,29 @@
         }
     }
     .contact-us {
-        background-color: $color-blue;   
+        height: 605px;
+        background-color: $color-blue;
+        position: absolute;
+        right: -50%;
+        opacity: 80%;       
     } 
 }
-.map {    
+.transition-in{
+    right: 0 !important;
+    transition: right .5s, linear .5s, opacity .5s;
+}
+.transition-out{
+    right: -50%;
+    transition: right .5s, linear .5s, opacity .5s;
+}
+.map {   
+    width: 100%;
+    height: inherit; 
     overflow: hidden;
-    padding-left: 35px;
     iframe {
-        margin-left: -15px;
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
     }
 }
 div .map {    
@@ -55,22 +73,52 @@ form {
         &:last-child {
             padding-bottom: 60px;
             border-bottom: 2px solid $color-white;
-        }
-        button {
-            width: 100px;
-            height: 30px;
-            background-color: $color-yellow;
-            @include text-title-bold-30;
-            font-size: 16px;
-            font-weight: 600;
-            border: 2px solid transparent;
-        }        
+        }               
     }
 }
 form div input:focus, form div textarea:focus {
     outline: none;
     outline-offset: 0;
 }
+.btn {
+    width: 100px;
+    height: 30px;
+    background-color: $color-yellow;
+    @include text-title-bold-30;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    &:hover {
+        background-color: $color-white;
+    }
+    &:active {
+        border: 2px solid $color-yellow;
+    }
+    &:focus {
+        outline: none;
+        outline-offset: 0;
+    }
+}
+.btn-compact {
+    width: 100px;
+    height: 50px; 
+}
+.line {
+    padding-top: 555px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: $color-blue;
+    opacity: 70%;
+}
+.btn-close {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .location {
     div {
         @include text-title-bold-30;
@@ -84,11 +132,24 @@ form div input:focus, form div textarea:focus {
         font-size: 12px;
     }    
 }
-.links {
+.links {    
     padding-top: 10px;
     padding-left: 60px;
     padding-bottom: 45px;
-    a {
+    div {
         padding-right: 5px;
+    }
+    a {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        &:hover {
+            border: 2px solid $color-yellow;
+        }
+        &:active {
+            border: 2px solid $color-orange;
+        }
     }
 }

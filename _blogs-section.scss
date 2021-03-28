@@ -5,16 +5,23 @@
 .blog-menu {
     align-self: flex-end;
     div {
-        padding-bottom: 25px;
+        padding-bottom: 15px;
     }
     div:first-child {
         padding-top: 55px;
     }
     a {
+        margin: 0;
+        padding: 10px 0;
+        transition: margin .5s, color .5s;
         text-decoration: none;
         @include text-description-regular-18;
         color: $color-black;
-    }
+        &:hover {
+            margin: 10px 0;
+            color: $color-yellow;
+        }
+    }    
 }
 .blog-article {    
     padding: 30px 30px 0 30px;

@@ -50,3 +50,17 @@
 .border-hover {
     @include borderHover;
 }
+.show {
+    visibility: visible;
+    opacity: 80%;
+    transition: visibility .3s, linear .3s, opacity .3s;
+}
+.hide {    
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s, linear .3s, opacity .3s;
+}
+.menu-overflow {
+    overflow: auto;
+    white-space: nowrap;
+}

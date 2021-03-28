@@ -447,6 +447,25 @@ span {
   z-index: 2;
 }
 
+@media (max-width: 375px) {
+  .header-title {
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 376px) {
+  .header-title {
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-title {
+    margin-top: 120px;
+    font-size: 180px;
+  }
+}
+
 .title-sublime {
   font-family: 'Myriad Pro', sans-serif;
   font-weight: 700;
@@ -479,7 +498,6 @@ span {
   width: 100%;
   height: 100%;
   min-height: 530px;
-  max-height: 550px;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 70%;
@@ -524,18 +542,39 @@ span {
   padding-bottom: 60px;
 }
 
-div .section-title {
+.about .section-title {
   padding-left: 50px;
 }
 
-.section-title div:first-child {
+.about .section-title > div:nth-child(1) {
   color: #717171;
   font-size: 30px;
 }
 
-.section-title div:first-child span {
+.about .section-title > div:nth-child(1) span {
   font-size: 45px;
   color: #717171;
+}
+
+.about .section-title > div:nth-child(2) {
+  font-size: 80px;
+}
+
+.about .section-title > div:nth-child(2) span {
+  font-size: 80px;
+}
+
+@media (max-width: 375px) {
+  .section-title > div:nth-child(2) {
+    font-size: 60px !important;
+  }
+  .section-title > div:nth-child(2) span {
+    font-size: 60px !important;
+  }
+}
+
+div .section-title {
+  padding-left: 50px;
 }
 
 .span-underline {
@@ -981,7 +1020,7 @@ div .section-title {
 }
 
 .blog-menu div {
-  padding-bottom: 25px;
+  padding-bottom: 15px;
 }
 
 .blog-menu div:first-child {
@@ -989,12 +1028,21 @@ div .section-title {
 }
 
 .blog-menu a {
+  margin: 0;
+  padding: 10px 0;
+  -webkit-transition: margin .5s, color .5s;
+  transition: margin .5s, color .5s;
   text-decoration: none;
   font-family: 'Myriad Pro', sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #fff;
   color: #000;
+}
+
+.blog-menu a:hover {
+  margin: 10px 0;
+  color: #ffc600;
 }
 
 .blog-article {
@@ -1046,6 +1094,9 @@ div .section-title {
 .contacts {
   background-color: #fff;
   padding-bottom: 65px;
+  height: 670px;
+  position: relative;
+  overflow: hidden;
 }
 
 .contacts div.section-title {
@@ -1057,16 +1108,36 @@ div .section-title {
 }
 
 .contacts .contact-us {
+  height: 605px;
   background-color: #2046b3;
+  position: absolute;
+  right: -50%;
+  opacity: 80%;
+}
+
+.transition-in {
+  right: 0 !important;
+  -webkit-transition: right .5s, linear .5s, opacity .5s;
+  transition: right .5s, linear .5s, opacity .5s;
+}
+
+.transition-out {
+  right: -50%;
+  -webkit-transition: right .5s, linear .5s, opacity .5s;
+  transition: right .5s, linear .5s, opacity .5s;
 }
 
 .map {
+  width: 100%;
+  height: inherit;
   overflow: hidden;
-  padding-left: 35px;
 }
 
 .map iframe {
-  margin-left: -15px;
+  width: 100%;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 div .map {
@@ -1123,7 +1194,12 @@ form div:last-child {
   border-bottom: 2px solid #fff;
 }
 
-form div button {
+form div input:focus, form div textarea:focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+.btn {
   width: 100px;
   height: 30px;
   background-color: #ffc600;
@@ -1136,9 +1212,39 @@ form div button {
   border: 2px solid transparent;
 }
 
-form div input:focus, form div textarea:focus {
+.btn:hover {
+  background-color: #fff;
+}
+
+.btn:active {
+  border: 2px solid #ffc600;
+}
+
+.btn:focus {
   outline: none;
   outline-offset: 0;
+}
+
+.btn-compact {
+  width: 100px;
+  height: 50px;
+}
+
+.line {
+  padding-top: 555px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: #2046b3;
+  opacity: 70%;
+}
+
+.btn-close {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .location div {
@@ -1168,27 +1274,62 @@ form div input:focus, form div textarea:focus {
   padding-bottom: 45px;
 }
 
-.links a {
+.links div {
   padding-right: 5px;
+}
+
+.links a {
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+.links a:hover {
+  border: 2px solid #ffc600;
+}
+
+.links a:active {
+  border: 2px solid #c88400;
 }
 
 .footer {
   background-color: #000;
 }
 
-.footer div.header-title {
+.footer div.footer-title {
   margin: 0;
   padding-top: 100px;
+  font-family: 'Myriad Pro', sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  color: #fff;
 }
 
-.footer > div .links {
+.footer-links {
   padding-top: 10px;
   padding-left: 0;
 }
 
-.footer > div .links a {
-  padding-right: 5px;
-  padding-bottom: 45px;
+.footer-links div {
+  margin-right: 5px;
+}
+
+.footer-links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+.footer-links a:hover {
+  border: 2px solid #ffc600;
 }
 
 .footer-menu {
@@ -1210,6 +1351,7 @@ form div input:focus, form div textarea:focus {
 }
 
 .footer-menu a {
+  margin: 0;
   text-decoration: none;
   font-family: 'Myriad Pro', sans-serif;
   font-weight: 700;
@@ -1217,6 +1359,13 @@ form div input:focus, form div textarea:focus {
   color: #000;
   font-size: 16px;
   color: #fff;
+  -webkit-transition: margin .5s, color .5s;
+  transition: margin .5s, color .5s;
+}
+
+.footer-menu a:hover {
+  color: #ffc600;
+  margin: 0 15px;
 }
 
 .footer-box {
@@ -1427,5 +1576,24 @@ form div input:focus, form div textarea:focus {
   border-top: 3px solid transparent;
   -webkit-transition: all .5s;
   transition: all .5s;
+}
+
+.show {
+  visibility: visible;
+  opacity: 80%;
+  -webkit-transition: visibility .3s, linear .3s, opacity .3s;
+  transition: visibility .3s, linear .3s, opacity .3s;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility .3s, linear .3s, opacity .3s;
+  transition: visibility .3s, linear .3s, opacity .3s;
+}
+
+.menu-overflow {
+  overflow: auto;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=style.css.map */
