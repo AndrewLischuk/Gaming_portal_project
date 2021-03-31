@@ -122,3 +122,180 @@
     align-items: center;
     order: 2;
 }
+
+//==================================MOBILE MENU==================================
+
+@mixin mobileMenu {
+    .nav-mobile-menu {
+        top: 10%;
+        width: 25px;
+        height: 30px;   
+        position: relative;
+        & span {
+            height: 2px;
+            background-color: $color-yellow;
+            position: absolute;
+            left: 0;
+            right: 0;
+            transition: .25s ease-in-out;
+            &:nth-child(1) {
+                top: 6px;
+            }
+            &:nth-child(2) {
+                top: 14px;
+            }
+            &:nth-child(3) {
+                bottom: 6px;
+            }
+        }
+        &.active-menu span:nth-child(1) {
+            top: 50%;
+            transform: rotate(45deg);
+        }
+        &.active-menu span:nth-child(2) {
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+        &.active-menu span:nth-child(3) {
+            top: 50%;
+            transform: scale(0)
+        }
+    }     
+    .hidden-menu {
+        opacity: 0;
+        visibility: hidden;
+    }   
+}
+@mixin mobileMenuHeader {
+    .nav-mobile-menu-none {    
+        position: absolute;
+        right: 0;
+        top: -300px;
+    }
+    .navigation {
+        transform: translateX(150%);
+        position: absolute;
+        right: 0;
+        top: -325px;
+        width: min-content;
+        z-index: 5;
+        transition: 500ms ease-in-out;
+        &.active-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+            top: -290px;
+            background-color: #1d2026cb;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;        
+        }
+    }
+    .active-menu a {
+        margin: 5px 0 !important;        
+        height: min-content;        
+    }    
+    .flex-column-center {
+        align-self: flex-end;
+    }
+    .menu a {
+        margin: 0;           
+        text-decoration: none;
+        @include text-description-regular-18;
+        color: $color-yellow;
+        transition: margin .5s, color .5s;        
+    }
+}
+@mixin mobileMenuFeat {
+    .nav-mobile-menu-none-feat {    
+        position: absolute;
+        right: 0;
+        top: 115px;
+    }
+    .navigation-feat {
+        transform: translateX(150%);
+        position: absolute;
+        right: 0;
+        top: 150px;
+        width: max-content;
+        z-index: 5;
+        transition: 500ms ease-in-out;
+        &.active-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+            top: 150px;
+            background-color: #1d2026cb;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;        
+        }
+    }
+    .active-menu a {
+        margin: 10px 0 !important;        
+        height: min-content;        
+    }    
+    .flex-column-center {
+        align-self: flex-end;
+    }
+    .feat-menu a {
+        margin: 0;
+        padding: 0 5px;
+        text-decoration: none;    
+        transition: margin .5s;     
+        color: $color-yellow;            
+    }
+}
+@mixin mobileMenuBlog {
+    .blog-pos {
+        position: relative;
+    }
+    .nav-mobile-menu-none-blog {    
+        position: absolute;
+        right: 0;
+        top: 40px;
+    }
+    .navigation-blog {
+        transform: translateX(150%);
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: max-content;
+        z-index: 5;
+        transition: 500ms ease-in-out;
+        &.active-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+            top: 80px;
+            background-color: #1d2026cb;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;        
+        }
+    }
+    .active-menu a {
+                
+        height: min-content;        
+    }    
+    .flex-column-center {
+        align-self: flex-end;
+    }
+    .blog-menu {
+        div:first-child {
+            padding-top: 0;
+        }
+        a {   
+            margin: 0;     
+            padding: 0 5px;   
+            color: $color-yellow;
+            transition: color .5s;
+            &:hover {
+                color: $color-black;
+            }            
+        }
+    }
+}
+
+        
+        

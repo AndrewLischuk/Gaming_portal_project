@@ -1,6 +1,7 @@
 .features {
     background-color: $color-white;
     @include sectionTitleDev;
+    position: relative;
 }
 .feat-menu {
     padding-top: 30px;

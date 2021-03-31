@@ -47,6 +47,9 @@ span {
 .title-sublime {
     @include fontSublimeTitle;
     font-size: 40px;
+    font-size: 40px;
+    position: absolute;
+    top: 50px;
 }
 
 .header-description {
@@ -69,11 +72,6 @@ span {
         object-fit: cover;
         opacity: 70%;
     }
-}
-.title-sublime {
-    font-size: 40px;
-    position: absolute;
-    top: 70px;
 }
 .menu {
     position: absolute;
