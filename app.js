@@ -35,11 +35,7 @@ let menu = document.querySelector(".menu");
 let featMenu = document.querySelector(".feat-menu");
 let blogMenu = document.querySelector(".blog-menu");
 
-let menuBtn = document.querySelectorAll(".menu a", ".feat-menu", ".blog-menu");
-
-
-
-   
+let menuBtn = document.querySelectorAll(".menu a", ".feat-menu", ".blog-menu");  
 
 mobileMenu[0].addEventListener("click", function() {
     mobileMenu[0].classList.toggle("active-menu");
@@ -84,10 +80,17 @@ mobileMenu[2].addEventListener("click", function() {
     )
 })
 
+//==============================SLIDER==============================
 
-
-
-
+$('.fade').slick({
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+  });
 
 
 

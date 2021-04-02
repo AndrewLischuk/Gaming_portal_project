@@ -164,6 +164,7 @@
     .hidden-menu {
         opacity: 0;
         visibility: hidden;
+        overflow: hidden;
     }   
 }
 @mixin mobileMenuHeader {
@@ -173,18 +174,15 @@
         top: -300px;
     }
     .navigation {
-        transform: translateX(150%);
         position: absolute;
         right: 0;
-        top: -325px;
-        width: min-content;
+        top: -300px;
         z-index: 5;
-        transition: 500ms ease-in-out;
+        transition: top 500ms ease-in-out;
         &.active-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateX(0);
-            top: -290px;
+            top: -260px;
             background-color: #1d2026cb;
             padding: 20px;
             display: flex;
@@ -213,18 +211,12 @@
         top: 115px;
     }
     .navigation-feat {
-        transform: translateX(150%);
         position: absolute;
         right: 0;
-        top: 150px;
-        width: max-content;
         z-index: 5;
-        transition: 500ms ease-in-out;
         &.active-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateX(0);
-            top: 150px;
             background-color: #1d2026cb;
             padding: 20px;
             display: flex;
@@ -256,17 +248,15 @@
         top: 40px;
     }
     .navigation-blog {
-        transform: translateX(150%);
         position: absolute;
         right: 0;
         top: 60px;
-        width: max-content;
+        padding: 0;
         z-index: 5;
-        transition: 500ms ease-in-out;
+        transition: top 500ms, padding 500ms;
         &.active-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateX(0);
             top: 80px;
             background-color: #1d2026cb;
             padding: 20px;
@@ -274,8 +264,7 @@
             flex-direction: column;        
         }
     }
-    .active-menu a {
-                
+    .active-menu a {                
         height: min-content;        
     }    
     .flex-column-center {
