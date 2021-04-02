@@ -1531,7 +1531,7 @@ form div input:focus, form div textarea:focus {
   .nav-mobile-menu-none-feat {
     position: absolute;
     right: 0;
-    top: 115px;
+    top: 80px;
   }
   .navigation-feat {
     position: absolute;
@@ -1570,7 +1570,7 @@ form div input:focus, form div textarea:focus {
     color: #ffc600;
   }
   .features .section-title {
-    padding-bottom: 45px;
+    padding-bottom: 15px;
   }
   .features .nav-mobile-menu span {
     background-color: #161616;
@@ -1630,6 +1630,12 @@ form div input:focus, form div textarea:focus {
   }
   .blog-pos .nav-mobile-menu span {
     background-color: #161616;
+  }
+}
+
+@media (max-width: 374px) {
+  .features .section-title {
+    padding-left: 15px;
   }
 }
 
