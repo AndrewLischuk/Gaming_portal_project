@@ -88,7 +88,7 @@
 // @mixin mobileSM {
     @media (min-width: 376px) {
         .container {
-            max-width: 540px;
+            max-width: 100%;
         }
         .col-sm-1 {
             flex: 0 0 8.33%;

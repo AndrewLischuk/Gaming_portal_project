@@ -82,6 +82,7 @@
 }
 @mixin flexColumnCenter {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -169,20 +170,21 @@
 }
 @mixin mobileMenuHeader {
     .nav-mobile-menu-none {    
-        position: absolute;
+        position: fixed;
         right: 0;
-        top: -300px;
+        top: 30px;
+        z-index: 4;
     }
     .navigation {
-        position: absolute;
+        position: fixed;
         right: 0;
-        top: -300px;
+        top: 30px;
         z-index: 5;
         transition: top 500ms ease-in-out;
         &.active-menu {
             opacity: 1;
             visibility: visible;
-            top: -260px;
+            top: 60px;
             background-color: #1d2026cb;
             padding: 20px;
             display: flex;

@@ -3,6 +3,12 @@
 @media (max-width: 575px) {
     @include mobileMenu;
     @include mobileMenuHeader;
+    .header-title {
+        position: fixed;
+        top: 0px;
+        margin-top: 0;
+        background-color: #1616165b;
+    }    
     // ======== //
     @include mobileMenuFeat;
     .features {
